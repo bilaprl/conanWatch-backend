@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -6,7 +6,13 @@ const mongoose = require("mongoose");
 const watchlistRoutes = require("./routes/watchlistRoutes");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://conan-watch-backend.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 // server.js
