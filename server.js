@@ -8,7 +8,7 @@ const watchlistRoutes = require("./routes/watchlistRoutes");
 const app = express();
 app.use(
   cors({
-    origin: "https://conan-watch-backend.vercel.app",
+    origin: "https://conan-watch-frontend.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
